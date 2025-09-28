@@ -22,6 +22,8 @@ SYSTEMD_SERVICE="n8n-docker.service"
 APACHE_CONF="/etc/apache2/sites-available/n8n.conf"
 COMPOSE_CMD="docker compose"
 
+export APACHE_LOG_DIR=/var/log/apache2
+
 usage() {
   cat <<EOF
 Uso: $0 --domain ejemplo.com [--ssl --email correo@dominio] [--repo URL]

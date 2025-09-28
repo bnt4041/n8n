@@ -26,7 +26,7 @@ sudo bash scripts/deploy_n8n.sh --domain n8n.tu-dominio.com
 Con SSL:
 
 ```bash
-sudo bash scripts/deploy_n8n.sh --domain n8n.tu-dominio.com --ssl --email admin@tu-dominio.com
+sudo bash scripts/deploy_n8n.sh --domain n8n.playhunt.es --ssl --email beni4041@gmail.com
 ```
 
 Argumentos:
