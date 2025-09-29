@@ -53,17 +53,17 @@ services:
       timeout: 10s
       retries: 5
 
-    wa-automate:
-      build: ./services/wa-automate
-      container_name: wa_automate
-      restart: unless-stopped
-      ports:
-        - "3000:3000"   # Interfaz web QR/login
-        - "3001:3001"   # API REST
-      volumes:
-        - ./services/wa-automate/config.json:/usr/src/app/config.json
-      depends_on:
-        - n8n
+  wa-automate:
+    build: ./services/wa-automate
+    container_name: wa_automate
+    restart: unless-stopped
+    ports:
+      - "3000:3000"   # Interfaz web QR/login
+      - "3001:3001"   # API REST
+    volumes:
+      - ./services/wa-automate/config.json:/usr/src/app/config.json
+    depends_on:
+      - n8n
 
 volumes:
   postgres_data:
